@@ -1,12 +1,24 @@
 .hero {
+  @include breakpoint-up(large){
+    display: flex;
+    align-items: center;
+  }
 
   &__image {
     position: relative;
-    background-image: url(/project/images/bg-intro-mobile.svg);
+    background-image: url("/project/images/bg-intro-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 17.5rem;
+
+    @include breakpoint-up(large){
+      flex: 1;
+      order: 2;
+      min-height: 41rem;
+      background-image: url("/project/images/bg-intro-desktop.svg");
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -21,6 +33,11 @@
 
   &__text {
     text-align: center;
+    // breakpoint to display desktop. setting flex: 1 to both children div makes them assume the same height. "order" changes the order of appearance of each div
+    @include breakpoint-up(large){
+      flex: 1;
+      order: 1;
+    }
 
     h1 {
       font-weight: 300;
