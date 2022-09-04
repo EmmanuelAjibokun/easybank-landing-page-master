@@ -1,7 +1,11 @@
 .hero {
-  @include breakpoint-up(large){
-    display: flex;
-    align-items: center;
+  background-color: $veryLightGray;
+
+  .container {
+    @include breakpoint-up(large){
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__image {
@@ -13,7 +17,7 @@
     min-height: 17.5rem;
 
     @include breakpoint-up(large){
-      flex: 1;
+      flex: 3;
       order: 2;
       min-height: 41rem;
       background-image: url("/project/images/bg-intro-desktop.svg");
@@ -36,8 +40,9 @@
     text-align: center;
     // breakpoint to display desktop. setting flex: 1 to both children div makes them assume the same height. "order" changes the order of appearance of each div
     @include breakpoint-up(large){
-      flex: 1;
+      flex: 2;
       order: 1;
+      text-align: left;
     }
 
     h1 {
@@ -46,6 +51,10 @@
       line-height: 1.15;
       color: $darkBlue;
       margin-bottom: 1.5rem;
+
+      @include breakpoint-up(large){
+        font-size: $font-xlg;
+      }
     }
 
     p {
