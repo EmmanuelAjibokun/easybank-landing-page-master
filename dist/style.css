@@ -346,12 +346,30 @@ button:hover, .button:hover {
         -ms-flex-order: 2;
             order: 2;
     min-height: 41rem;
-    background-image: url("/project/images/bg-intro-desktop.svg");
-    background-position: left center;
+    background-image: none;
   }
 }
 
 .hero__image::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/project/images/bg-intro-desktop.svg");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+@media (min-width: 64em) {
+  .hero__image::before {
+    width: 150%;
+    background-size: 122%;
+    background-position: 0% 83%;
+  }
+}
+
+.hero__image::after {
   content: "";
   position: absolute;
   height: 100%;

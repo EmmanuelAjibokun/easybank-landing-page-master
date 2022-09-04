@@ -20,11 +20,29 @@
       flex: 3;
       order: 2;
       min-height: 41rem;
-      background-image: url("/project/images/bg-intro-desktop.svg");
-      background-position: left center;
+      background-image: none;
+      // background-image: url("/project/images/bg-intro-desktop.svg");
+      // background-position: left center;
     }
 
     &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: url("/project/images/bg-intro-desktop.svg");
+      background-size: 93%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @include breakpoint-up(large){
+        width: 150%;
+        background-size: 122%;
+        background-position: 0% 83%;
+      }
+    }
+    
+    &::after {
       content: "";
       position: absolute;
       height: 100%;
@@ -34,6 +52,7 @@
       background-repeat: no-repeat;
       background-position: center bottom;
     }
+
   }
 
   &__text {
