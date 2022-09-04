@@ -380,6 +380,15 @@ button:hover, .button:hover {
   background-position: center bottom;
 }
 
+@media (min-width: 64em) {
+  .hero__image::after {
+    width: 120%;
+    height: 122%;
+    background-size: 93%;
+    background-position: center bottom;
+  }
+}
+
 .hero__text {
   text-align: center;
 }

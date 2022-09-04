@@ -51,6 +51,13 @@
       background-size: 93%;
       background-repeat: no-repeat;
       background-position: center bottom;
+
+      @include breakpoint-up(large){
+        width: 120%;
+        height: 122%;
+        background-size: 93%;
+        background-position: center bottom;
+      }
     }
 
   }
