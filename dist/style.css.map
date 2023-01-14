@@ -9,7 +9,8 @@
         "../project/app/scss/_globals.scss",
         "../project/app/scss/_header.scss",
         "../project/app/scss/_hero.scss",
-        "../project/app/scss/_feature.scss"
+        "../project/app/scss/_feature.scss",
+        "../project/app/scss/article.scss"
     ],
     "names": [],
     "file": "style.css"
